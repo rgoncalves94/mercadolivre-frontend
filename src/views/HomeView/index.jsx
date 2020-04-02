@@ -6,7 +6,7 @@ function HomeView({ ...props}) {
     return (
         <React.Fragment>
             <Header />
-            <Content>Hello World</Content>
+            <Content noBgColor> Home </Content>
         </React.Fragment>
     )
 }
