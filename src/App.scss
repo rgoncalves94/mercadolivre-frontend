@@ -5,4 +5,15 @@
 @import 'bootstrap/scss/bootstrap-grid.scss';
 @import 'bootstrap/scss/bootstrap-reboot.scss';
 
-@import './css/colors.scss';
+@import './css/variables.scss';
+@import './css/fonts.scss';
+
+body {
+    background-color: $background-color;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.App {
+    width:100%;
+}
