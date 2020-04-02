@@ -1,0 +1,20 @@
+@import '../../css/variables.scss';
+@import '../../css/mixins/effects.scss';
+
+.btn {
+    @include fade-colors;
+    border: none;
+    border-radius: $default-border-radius;
+    padding: 10px;
+    color: #fff;
+    width: 100%;
+
+    &.btn-default {
+        background-color: $primary-button-color;
+
+        &:hover,&:active {
+            background-color: $primary-button-color-hover;
+        }
+        
+    }
+}
