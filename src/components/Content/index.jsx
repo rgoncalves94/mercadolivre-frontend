@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './styles.scss'
 
-function Content({ children, ...props}) {
+function Content({ noBgColor, children, ...props}) {
     return (
-        <main className="main">
-            <div className="content col-10 offset-1">
+        <main className={`main`}>
+            <div className={`content col-10 offset-1 ${noBgColor && 'no-bg-color'}`}>
                 {children}
             </div>
         </main>
@@ -13,10 +13,15 @@ function Content({ children, ...props}) {
 }
 
 Content.propTypes = {
+    noBgColor: PropTypes.bool,
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node
-    ]).isRequired
+    ]).isRequired,
+}
+
+Content.defaultValues = {
+    noBgColor: false,
 }
 
 export default Content
