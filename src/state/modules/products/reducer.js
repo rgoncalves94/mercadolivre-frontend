@@ -3,6 +3,7 @@ import {
     SEARCH_FULLFILED,
     SEARCH_REQUESTED,
     SEARCH_SUCCEDED,
+
     DETAIL_FAILURE,
     DETAIL_FULLFILED,
     DETAIL_REQUESTED,
@@ -23,6 +24,7 @@ export default function reducer(state = initialState, action = {}) {
         return {
             ...state,
             term: action.payload,
+            result: null,
             error: null,
             loading: true,
             product: null,
@@ -46,6 +48,7 @@ export default function reducer(state = initialState, action = {}) {
         return {
             ...state,
             error: null,
+            product: null,
             loading: true,
         }
     case DETAIL_SUCCEDED:
