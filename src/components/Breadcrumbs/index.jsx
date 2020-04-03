@@ -11,7 +11,7 @@ function Breadcrumbs({ crumbs, ...props }) {
         <section className="breadcrumbs col-10 offset-1" {...props}>
             <ul className="breadcrumbs-list">
                 {crumbs.map((crumb, index) =>( 
-                    <React.Fragment>
+                    <React.Fragment key={index}>
                         <li className={`breadcrumbs-list-item ${addBold(index, crumbs.length)}`}>{crumb}</li>
                         {addSymbol(index, crumbs.length)}
                     </React.Fragment>
