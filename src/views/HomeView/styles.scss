@@ -1,0 +1,16 @@
+@import '../../css/variables.scss';
+
+
+.home-view {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .home-view-tip {
+        text-align: center;
+        font-size: 3em;
+        color: #ddd;
+        text-shadow: -2px -2px #ccc;
+    }
+}
