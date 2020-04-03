@@ -4,9 +4,10 @@ import { ProductType } from '../product.types'
 import './styles.scss'
 import Image from '../../Image'
 import Button from '../../Button'
+import ContentLoader from '../../ContentLoader'
 
-function ProductDetail({ product, onClickBuy, ...props }) {
-    const { item } = product
+function ProductDetail({ loading, product, onClickBuy, ...props }) {
+    
     const defineCondition = (condition)  => {
         const conditions = {
             'new': 'Novo'
@@ -14,6 +15,11 @@ function ProductDetail({ product, onClickBuy, ...props }) {
         return conditions[condition] || condition
     }
 
+    if(loading || !product) {
+        return <ContentLoader></ContentLoader>;
+    }
+
+    const { item } = product
     return (
         <section>
             <article className="product-detail">
@@ -42,11 +48,13 @@ function ProductDetail({ product, onClickBuy, ...props }) {
 }
 
 ProductDetail.propTypes = {
-    product: ProductType.isRequired,
+    product: ProductType,
+    loading: PropTypes.bool,
     onClickBuy: PropTypes.func,
 }
 
 ProductDetail.defaultProps = {
+    loading: false,
     onClickBuy: () => console.log('Buy clicked!')
 }
 
