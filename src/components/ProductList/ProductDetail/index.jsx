@@ -38,7 +38,11 @@ function ProductDetail({ loading, product, onClickBuy, ...props }) {
                     <div className="product-detail-description col-12">
                         <h2 className="product-detail-description-title">Descrição do Produto</h2>
                         <div className="product-detail-description-content">
-                            {item.description}
+                            {!item.description ? '(Vazio)' : item.description.split("\n").map((item, index) => 
+                                <span key={index}>
+                                    {item}<br/>
+                                </span>
+                            )}
                         </div>
                     </div>
                 </div>
