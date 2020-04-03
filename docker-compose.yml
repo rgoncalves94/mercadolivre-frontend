@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  mercadolivre-frontend:
+    image: rgoncalves94/mercadolivre-frontend:latest
+    ports:
+      - 80:80
+    networks:
+      - mercadolivre
+networks: 
+  mercadolivre:
