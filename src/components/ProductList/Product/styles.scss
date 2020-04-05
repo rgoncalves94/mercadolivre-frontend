@@ -3,7 +3,7 @@
 
 .product {
     width: 100%;
-    padding-left: 16px;
+    padding: 0 16px;
     height: 212px;
     display: flex;
     align-items: center;
@@ -49,6 +49,20 @@
         .product-info-free-shipping {
             display: inline-block;
             margin-left: 10px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .product {
+        padding-top: 10px;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+
+        .product-info {
+            text-align: center;
+            margin: 15px 0;
         }
     }
 }

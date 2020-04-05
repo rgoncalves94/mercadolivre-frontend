@@ -52,3 +52,15 @@
         }
     }
 }
+
+
+@media (max-width: 800px) {
+    .product-detail {
+        .product-detail-images{
+            img.image {
+                width: auto;
+                max-height:300px;
+            }
+        }
+    }
+}
