@@ -1,7 +1,6 @@
 import React from 'react'
-import propTypes from 'prop-types'
-import Thumbnail from '../../Thumbnail'
 import { IconFreeShipping } from '../../Icons'
+import Thumbnail from '../../Thumbnail'
 import { ProductItemType } from '../product.types'
 import './styles.scss'
 
@@ -23,7 +22,6 @@ function Product({ item, ...props}) {
 }
 
 Product.propTypes = {
-    onClick: propTypes.func,
     item: ProductItemType.isRequired
 }
 
